@@ -10,7 +10,7 @@
 html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:#1c1c1e}
 
 /* ── TOP BAR ── */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(242,242,247,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:.5px solid rgba(0,0,0,.1)}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(242,242,247,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}
 .topbar-inner{max-width:640px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
 .tb-logo{display:flex;align-items:center;gap:9px}
 .tb-mark{width:32px;height:32px;background:#1c3d2e;border-radius:9px;display:flex;align-items:center;justify-content:center}
@@ -20,13 +20,13 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
 .tb-badge{background:#e8f0eb;color:#1c3d2e;font-size:12px;font-weight:600;padding:5px 12px;border-radius:20px;letter-spacing:.01em}
 
 /* ── MAIN NAV TABS ── */
-.nav-wrap{position:fixed;top:61px;left:0;right:0;z-index:99;background:rgba(242,242,247,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:.5px solid rgba(0,0,0,.08)}
+.nav-wrap{position:fixed;top:72px;left:0;right:0;z-index:99;background:rgba(242,242,247,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);}
 .nav-inner{max-width:640px;margin:0 auto;padding:0 20px;display:flex;gap:4px}
-.nav-tab{flex:1;padding:10px 6px;text-align:center;font-size:12px;font-weight:600;color:#8e8e93;cursor:pointer;border-bottom:2px solid transparent;transition:all .18s;letter-spacing:.01em}
+.nav-tab{flex:1;padding:10px 6px;text-align:center;font-size:14px;font-weight:600;color:#8e8e93;cursor:pointer;border-bottom:2px solid transparent;transition:all .18s;letter-spacing:.01em}
 .nav-tab.active{color:#1c3d2e;border-bottom-color:#1c3d2e}
 
 /* ── CONTENT ── */
-.content{max-width:640px;margin:0 auto;padding:128px 16px 40px}
+.content{max-width:640px;margin:0 auto;padding:140px 16px 40px}
 
 /* ── VIEW ── */
 .view{display:none}
@@ -142,6 +142,7 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
 .cmd-name{font-size:14px;font-weight:700;letter-spacing:-.2px}
 .cmd-ref{font-size:10px;color:#1c1c1e;margin-top:1px}
 .status-pill{font-size:10px;font-weight:600;padding:4px 10px;border-radius:20px;white-space:nowrap}
+.sp-urgence{background:#fff0f0;color:#ff3b30;font-weight:700}
 .sp-intake{background:#eef0fd;color:#5856d6}
 .sp-nettoyage{background:#eef4fd;color:#3478f6}
 .sp-retouche{background:#fff8ee;color:#ff9500}
@@ -190,7 +191,7 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
 .sheet-overlay.open{display:flex;animation:fadeIn .2s}
 .sheet{background:#f2f2f7;border-radius:24px 24px 0 0;width:100%;max-width:640px;padding:8px 0 0;max-height:80vh;overflow-y:auto}
 .sheet-handle{width:36px;height:4px;background:#d0d0d0;border-radius:2px;margin:0 auto 12px}
-.sheet-title{font-size:17px;font-weight:700;letter-spacing:-.3px;padding:0 20px 12px;border-bottom:.5px solid rgba(0,0,0,.08)}
+.sheet-title{font-size:17px;font-weight:700;letter-spacing:-.3px;padding:0 20px 12px;}
 .sheet-opts{padding:8px 0}
 .sheet-opt{display:flex;align-items:center;padding:14px 20px;cursor:pointer;gap:12px;transition:background .1s}
 .sheet-opt:active{background:rgba(0,0,0,.04)}
@@ -199,7 +200,99 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
 .sheet-cancel{padding:8px 16px 16px}
 .sheet-cancel-btn{width:100%;background:#fff;border:none;border-radius:14px;padding:15px;font-size:15px;font-weight:600;color:#ff3b30;cursor:pointer;font-family:inherit}
 
+/* ── LOGIN SCREEN ── */
+.login-screen{position:fixed;inset:0;z-index:500;background:#1c3d2e;display:none;flex-direction:column;align-items:center;justify-content:center;padding:32px}
+.login-logo{width:64px;height:64px;background:rgba(255,255,255,.1);border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.login-logo svg{width:28px;height:28px;stroke:#d4a85a;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.login-title{font-size:26px;font-weight:700;color:#fff;letter-spacing:-.5px;margin-bottom:4px}
+.login-sub{font-size:14px;color:rgba(255,255,255,.45);margin-bottom:40px}
+.login-card{background:#fff;border-radius:20px;padding:28px 24px;width:100%;max-width:340px}
+.login-lbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#8e8e93;margin-bottom:12px;text-align:center}
+.pin-dots{display:flex;gap:12px;justify-content:center;margin-bottom:24px}
+.pin-dot{width:14px;height:14px;border-radius:50%;background:#e8e8e8;transition:all .15s}
+.pin-dot.filled{background:#1c3d2e}
+.pin-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pin-btn{background:#f5f5f5;border:none;border-radius:14px;padding:16px;font-size:22px;font-weight:500;cursor:pointer;font-family:inherit;color:#1c1c1e;transition:all .12s;touch-action:manipulation}
+.pin-btn:active{background:#e8f0eb;transform:scale(.95)}
+.pin-btn.del{font-size:16px;color:#8e8e93}
+.pin-error{text-align:center;font-size:13px;color:#ff3b30;margin-top:12px;min-height:18px;font-weight:500}
+
+/* ── ADMIN PANEL ── */
+.admin-user-card{background:#fff;border-radius:14px;padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 6px rgba(0,0,0,.06);display:flex;align-items:center;gap:12px}
+.admin-avatar{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0}
+.admin-avatar.role-admin{background:#1c3d2e;color:#fff}
+.admin-avatar.role-vendeur{background:#e8f0eb;color:#1c3d2e}
+.admin-avatar.role-couturiere{background:#fff8ee;color:#ff9500}
+.admin-user-info{flex:1}
+.admin-user-name{font-size:14px;font-weight:600;color:#1c1c1e}
+.admin-user-role{font-size:11px;color:#8e8e93;margin-top:1px}
+.admin-user-pin{font-size:12px;font-weight:600;color:#8e8e93;letter-spacing:.1em;background:#f5f5f5;border-radius:8px;padding:4px 10px;flex-shrink:0}
+
+/* ── LOGOUT BTN ── */
+.logout-btn{display:flex;align-items:center;gap:6px;background:none;border:none;color:#8e8e93;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;padding:4px 8px}
+
+/* ── ADMIN MODAL ── */
+.add-user-form{padding:16px 20px}
+.add-user-form .field-row{border-bottom:.5px solid #f0f0f0}
+
 /* ── NOTIFICATION TOAST ── */
+/* ── PROFILE SCREEN ── */
+.profile-screen{position:fixed;inset:0;z-index:300;background:#f2f2f7;display:none;flex-direction:column;overflow:hidden}
+.profile-screen.open{display:flex;animation:slideUp .25s cubic-bezier(.32,.72,0,1)}
+.profile-nav{display:flex;align-items:center;padding:52px 16px 12px;background:#f2f2f7;flex-shrink:0;max-width:640px;width:100%;margin:0 auto}
+.profile-scroll{flex:1;overflow-y:auto;padding:0;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;align-items:center}
+.profile-content{width:100%;max-width:640px;padding:0 16px 40px}
+.profile-hero{background:#1c3d2e;border-radius:18px;padding:20px;margin-bottom:14px;display:flex;align-items:center;gap:14px}
+.profile-avatar{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.profile-avatar svg{width:22px;height:22px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.profile-hero-name{font-size:18px;font-weight:700;color:#fff;letter-spacing:-.3px}
+.profile-hero-role{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.stat-card{background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.stat-val{font-size:28px;font-weight:700;color:#1c3d2e;letter-spacing:-.5px;line-height:1}
+.stat-lbl{font-size:11px;color:#8e8e93;margin-top:4px;line-height:1.3}
+.stat-card.wide{grid-column:1/-1}
+.billing-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:.5px solid #f0f0f0}
+.billing-row:last-child{border-bottom:none}
+.billing-month{font-size:13px;color:#1c1c1e;font-weight:500}
+.billing-amount{font-size:13px;font-weight:700;color:#1c3d2e}
+.contact-bewax{background:#fff;border-radius:14px;padding:14px 16px;box-shadow:0 1px 6px rgba(0,0,0,.06);display:flex;align-items:center;gap:12px;cursor:pointer;transition:all .1s;margin-bottom:10px}
+.contact-bewax:active{transform:scale(.99)}
+.contact-ico{width:40px;height:40px;border-radius:50%;background:#e8f0eb;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-ico svg{width:18px;height:18px;stroke:#1c3d2e;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.activity-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:.5px solid #f5f5f5}
+.activity-row:last-child{border-bottom:none}
+.activity-dot{width:8px;height:8px;border-radius:50%;background:#1c3d2e;flex-shrink:0;opacity:.5}
+.activity-txt{font-size:12px;color:#1c1c1e;flex:1}
+.activity-time{font-size:10px;color:#c7c7cc}
+.logout-big{width:100%;background:#fff;border:1.5px solid #ff3b30;color:#ff3b30;border-radius:50px;padding:14px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:4px;transition:all .15s}
+
+/* ── HISTORY MODAL ── */
+.hist-card{background:#fafafa;border-radius:14px;padding:13px 16px;margin-bottom:8px;cursor:pointer;transition:transform .1s}
+.hist-card:active{transform:scale(.99)}
+.hist-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px}
+.hist-name{font-size:13px;font-weight:700;color:#1c1c1e}
+.hist-done{font-size:10px;font-weight:600;color:#1c3d2e;background:#e8f0eb;border-radius:20px;padding:3px 9px}
+.hist-meta{font-size:11px;color:#1c1c1e;line-height:1.5}
+.hist-rets{font-size:11px;color:#1c1c1e;margin-top:4px;line-height:1.5}
+.hist-detail-overlay{position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.hist-detail-overlay.open{display:flex;animation:fadeIn .2s}
+.hist-sheet{background:#f2f2f7;border-radius:22px;width:100%;max-width:420px;padding:20px 0 0;max-height:82vh;overflow-y:auto;animation:popIn .2s cubic-bezier(.34,1.56,.64,1)}
+.hist-sheet-handle{width:36px;height:4px;background:#d0d0d0;border-radius:2px;margin:0 auto 14px}
+.hist-sheet-close{position:absolute;top:12px;right:16px;font-size:20px;color:#8e8e93;cursor:pointer;background:none;border:none;font-family:inherit;padding:4px}
+.see-all-btn{width:100%;background:#fff;border:1.5px solid #1c3d2e;color:#1c3d2e;border-radius:50px;padding:13px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:4px;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:6px}
+
+/* ── AUTOCOMPLETE ── */
+.ac-dropdown{position:absolute;top:100%;left:0;right:0;background:#fff;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.12);z-index:200;overflow:hidden;display:none;max-height:200px;overflow-y:auto}
+.ac-dropdown.open{display:block;animation:fadeIn .15s}
+.ac-item{display:flex;align-items:center;gap:10px;padding:11px 16px;cursor:pointer;border-bottom:.5px solid #f5f5f5;touch-action:manipulation}
+.ac-item:last-child{border-bottom:none}
+.ac-item:active{background:#f5f5f5}
+.ac-avatar{width:30px;height:30px;border-radius:50%;background:#e8f0eb;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:12px;font-weight:700;color:#1c3d2e}
+.ac-info{flex:1}
+.ac-name{font-size:13px;font-weight:600;color:#1c1c1e}
+.ac-sub{font-size:11px;color:#8e8e93}
+
 .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#1c1c1e;color:#fff;font-size:13px;font-weight:600;padding:12px 20px;border-radius:20px;z-index:999;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .25s}
 .toast.show{opacity:1}
 
@@ -227,7 +320,7 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
 .stl-date{font-size:10px;color:rgba(255,255,255,.35);margin-left:auto;flex-shrink:0}
 
 /* ── DETAIL OVERLAY ── */
-.detail{position:fixed;inset:0;z-index:200;background:#f2f2f7;display:none;flex-direction:column;overflow:hidden}
+.detail{position:fixed;inset:0;z-index:200;background:#f2f2f7;display:none;overflow:hidden}.detail.open{display:flex;flex-direction:column}
 .detail.open{display:flex;animation:slideUp .25s cubic-bezier(.32,.72,0,1)}
 @keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
 @keyframes popIn{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
@@ -251,6 +344,39 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
 </head>
 <body>
 
+<!-- LOGIN SCREEN -->
+<div class="login-screen" id="login-screen">
+  <div class="login-logo">
+    <svg viewBox="0 0 24 24"><path d="M12 2L8 8H4l4 4-2 8 6-4 6 4-2-8 4-4h-4z"/></svg>
+  </div>
+  <div class="login-title">Bewax</div>
+  <div class="login-sub">Portail Partenaire · Lido Vevey</div>
+  <div class="login-card">
+    <div class="login-lbl" id="pin-label">Entrez votre code PIN</div>
+    <div class="pin-dots" id="pin-dots">
+      <div class="pin-dot" id="d0"></div>
+      <div class="pin-dot" id="d1"></div>
+      <div class="pin-dot" id="d2"></div>
+      <div class="pin-dot" id="d3"></div>
+    </div>
+    <div class="pin-pad">
+      <button class="pin-btn" onclick="pinInput('1')">1</button>
+      <button class="pin-btn" onclick="pinInput('2')">2</button>
+      <button class="pin-btn" onclick="pinInput('3')">3</button>
+      <button class="pin-btn" onclick="pinInput('4')">4</button>
+      <button class="pin-btn" onclick="pinInput('5')">5</button>
+      <button class="pin-btn" onclick="pinInput('6')">6</button>
+      <button class="pin-btn" onclick="pinInput('7')">7</button>
+      <button class="pin-btn" onclick="pinInput('8')">8</button>
+      <button class="pin-btn" onclick="pinInput('9')">9</button>
+      <button class="pin-btn" onclick="pinClear()" style="grid-column:1">C</button>
+      <button class="pin-btn" onclick="pinInput('0')">0</button>
+      <button class="pin-btn del" onclick="pinDelete()">⌫</button>
+    </div>
+    <div class="pin-error" id="pin-error"></div>
+  </div>
+</div>
+
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-inner">
@@ -263,16 +389,22 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
         <div class="tb-partner" id="partnerLabel">Portail Partenaire</div>
       </div>
     </div>
-    <div class="tb-badge" id="partnerBadge">Lido Vevey</div>
+    <div style="display:flex;align-items:center;gap:8px">
+      <span class="tb-badge" id="partnerBadge">Lido Vevey</span>
+      <div id="profile-btn" onclick="openProfile()" style="display:none;width:34px;height:34px;border-radius:50%;background:#1c3d2e;display:none;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;touch-action:manipulation" id="profile-btn">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- NAV TABS -->
 <div class="nav-wrap">
   <div class="nav-inner">
-    <div class="nav-tab active" onclick="switchView('intake')">Nouvelle prise</div>
-    <div class="nav-tab" onclick="switchView('commandes')">Commandes</div>
-    <div class="nav-tab" onclick="switchView('couturiere')">Couturière</div>
+    <div class="nav-tab active" onclick="switchView('intake')" id="tab-intake">Nouvelle prise</div>
+    <div class="nav-tab" onclick="switchView('commandes')" id="tab-commandes">Commandes</div>
+    <div class="nav-tab" onclick="switchView('couturiere')" id="tab-couturiere">Couturière</div>
+    <div class="nav-tab" onclick="switchView('admin')" id="tab-admin" style="display:none">Équipe</div>
   </div>
 </div>
 
@@ -310,6 +442,7 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
         <input class="field-input" type="text" id="inp-ville" onkeydown="formFieldNav(event,'inp-ville')" placeholder="Vevey, Lausanne…" autocomplete="address-level2">
       </div>
     </div>
+    <div id="ac-dropdown" class="ac-dropdown" style="position:relative"></div>
 
     <!-- Veste -->
     <div class="sec-lbl">Veste</div>
@@ -438,6 +571,10 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
       <div class="cmd-title">Commandes</div>
       <div class="cmd-count" id="cmd-total-badge">0 en cours</div>
     </div>
+    <div style="position:relative;margin-bottom:12px">
+      <svg viewBox="0 0 24 24" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:#8e8e93;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="cmd-search" type="text" placeholder="Rechercher un client, une veste…" oninput="renderCommandes()" style="width:100%;background:#fff;border:none;border-radius:12px;padding:11px 12px 11px 36px;font-size:14px;font-family:inherit;color:#1c1c1e;outline:none;box-shadow:0 1px 6px rgba(0,0,0,.06)">
+    </div>
     <div class="filter-row">
       <div class="fpill active" onclick="filterCmds(this,'all')">Toutes</div>
       <div class="fpill" onclick="filterCmds(this,'intake')">En attente</div>
@@ -455,10 +592,59 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
       <div class="cmd-title">Retouches</div>
       <div class="cmd-count" id="cout-badge">0 en attente</div>
     </div>
+    <div style="position:relative;margin-bottom:12px">
+      <svg viewBox="0 0 24 24" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:#8e8e93;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input id="cout-search" type="text" placeholder="Rechercher un client, une veste…" oninput="renderCouturiere()" style="width:100%;background:#fff;border:none;border-radius:12px;padding:11px 12px 11px 36px;font-size:14px;font-family:inherit;color:#1c1c1e;outline:none;box-shadow:0 1px 6px rgba(0,0,0,.06)">
+    </div>
     <div id="cout-list"></div>
   </div>
 
+
+  <!-- ═══ VIEW : ADMIN ═══ -->
+  <div class="view" id="view-admin">
+    <div class="cmd-header">
+      <div class="cmd-title">Équipe</div>
+      <div class="cmd-count" id="team-count">0 membres</div>
+    </div>
+    <div id="team-list"></div>
+    <button class="submit-btn" style="margin-top:8px" onclick="openAddUser()">
+      <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      Ajouter un membre
+    </button>
+  </div>
+
 </div><!-- /content -->
+
+<!-- ADD USER MODAL -->
+<div id="add-user-modal" style="position:fixed;inset:0;z-index:400;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)">
+  <div style="background:#f2f2f7;border-radius:22px;width:100%;max-width:340px;padding:24px 20px 16px;box-shadow:0 20px 60px rgba(0,0,0,.25);animation:popIn .2s cubic-bezier(.34,1.56,.64,1)">
+    <div style="font-size:17px;font-weight:700;color:#1c1c1e;margin-bottom:16px;text-align:center" id="add-user-title">Nouveau membre</div>
+    <div class="card" style="margin-bottom:12px">
+      <div class="field-row no-tap">
+        <div class="field-label">Prénom</div>
+        <input class="field-input" type="text" id="new-user-name" placeholder="Prénom">
+      </div>
+      <div class="field-row no-tap" style="border-bottom:none">
+        <div class="field-label">Rôle</div>
+        <select id="new-user-role" style="flex:1;border:none;outline:none;font-size:13px;font-family:inherit;color:#1c1c1e;background:transparent;font-weight:500">
+          <option value="vendeur">Vendeur</option>
+          <option value="couturiere">Couturière</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+    </div>
+    <div style="font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#8e8e93;text-align:center;margin-bottom:10px">Code PIN (4 chiffres)</div>
+    <div style="display:flex;gap:8px;justify-content:center;margin-bottom:16px">
+      <input id="new-pin-1" type="tel" inputmode="numeric" maxlength="1" style="width:48px;height:48px;border:1.5px solid #e0e0e0;border-radius:12px;text-align:center;font-size:22px;font-weight:700;font-family:inherit;outline:none;color:#1c3d2e" oninput="movePinFocus(this,'new-pin-2')">
+      <input id="new-pin-2" type="tel" inputmode="numeric" maxlength="1" style="width:48px;height:48px;border:1.5px solid #e0e0e0;border-radius:12px;text-align:center;font-size:22px;font-weight:700;font-family:inherit;outline:none;color:#1c3d2e" oninput="movePinFocus(this,'new-pin-3')">
+      <input id="new-pin-3" type="tel" inputmode="numeric" maxlength="1" style="width:48px;height:48px;border:1.5px solid #e0e0e0;border-radius:12px;text-align:center;font-size:22px;font-weight:700;font-family:inherit;outline:none;color:#1c3d2e" oninput="movePinFocus(this,'new-pin-4')">
+      <input id="new-pin-4" type="tel" inputmode="numeric" maxlength="1" style="width:48px;height:48px;border:1.5px solid #e0e0e0;border-radius:12px;text-align:center;font-size:22px;font-weight:700;font-family:inherit;outline:none;color:#1c3d2e" oninput="movePinFocus(this,null)">
+    </div>
+    <button onclick="saveNewUser()" style="width:100%;background:#1c3d2e;color:#fff;border:none;border-radius:50px;padding:14px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:8px">Ajouter</button>
+    <button onclick="closeAddUser()" style="width:100%;background:none;border:none;color:#8e8e93;padding:10px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">Annuler</button>
+    <div id="add-user-error" style="text-align:center;font-size:12px;color:#ff3b30;margin-top:4px;min-height:16px"></div>
+  </div>
+</div>
 
 <!-- ═══ CONFIRMATION SCREEN ═══ -->
 <div class="confirm-screen" id="confirm-screen">
@@ -493,7 +679,10 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
       <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
     </div>
     <div class="detail-title" id="detail-title">Détail commande</div>
-    <div onclick="askDeleteCmd()" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.8);border:.5px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;margin-left:auto">
+    <div id="urgence-btn" onclick="toggleUrgence()" style="margin-left:auto;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;background:rgba(255,255,255,.8);border:.5px solid rgba(0,0,0,.08);transition:all .15s">
+      <svg id="urgence-icon" viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#8e8e93;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    </div>
+    <div onclick="askDeleteCmd()" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.8);border:.5px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;margin-left:4px">
       <svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:#ff3b30;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
     </div>
   </div>
@@ -525,6 +714,47 @@ html,body{width:100%;min-height:100%;background:#f2f2f7;font-family:'Inter',-app
     <div style="font-size:13px;color:#8e8e93;line-height:1.6;text-align:center;margin-bottom:20px" id="modal-body">Confirmer le changement ?</div>
     <button onclick="confirmModalAction()" style="width:100%;background:#1c3d2e;color:#fff;border:none;border-radius:50px;padding:14px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:8px;transition:all .15s" id="modal-confirm-btn">Confirmer</button>
     <button onclick="closeModal()" style="width:100%;background:none;border:none;color:#8e8e93;padding:10px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">Annuler</button>
+  </div>
+</div>
+
+<!-- PROFILE SCREEN -->
+<div class="profile-screen" id="profile-screen">
+  <div class="profile-nav">
+    <div class="detail-bk" onclick="closeProfile()" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.8);border:.5px solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0">
+      <svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#000;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round"><polyline points="15 18 9 12 15 6"/></svg>
+    </div>
+    <div style="font-size:17px;font-weight:700;letter-spacing:-.3px;margin-left:12px">Mon profil</div>
+  </div>
+  <div class="profile-scroll">
+    <div class="profile-content" id="profile-content">
+      <!-- Rendered by JS based on role -->
+    </div>
+  </div>
+</div>
+
+<!-- RETOUCHE HISTORY DETAIL -->
+<div class="hist-detail-overlay" id="hist-detail-overlay" onclick="closeHistDetail(event)">
+  <div class="hist-sheet" id="hist-sheet">
+    
+    <div id="hist-sheet-content" style="padding:0 20px 24px"></div>
+  </div>
+</div>
+
+<!-- CHANGE PIN MODAL -->
+<div id="change-pin-modal" style="position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)">
+  <div style="background:#f2f2f7;border-radius:22px;width:100%;max-width:340px;padding:24px 20px 16px;box-shadow:0 20px 60px rgba(0,0,0,.25);animation:popIn .2s cubic-bezier(.34,1.56,.64,1)">
+    <div style="font-size:17px;font-weight:700;color:#1c1c1e;margin-bottom:6px;text-align:center">Changer le code PIN</div>
+    <div style="font-size:13px;color:#8e8e93;text-align:center;margin-bottom:20px">Entrez votre nouveau code à 4 chiffres</div>
+    <div style="font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#8e8e93;text-align:center;margin-bottom:10px">Nouveau PIN</div>
+    <div style="display:flex;gap:8px;justify-content:center;margin-bottom:8px">
+      <input id="chpin-1" type="tel" inputmode="numeric" maxlength="1" style="width:48px;height:48px;border:1.5px solid #e0e0e0;border-radius:12px;text-align:center;font-size:22px;font-weight:700;font-family:inherit;outline:none;color:#1c3d2e" oninput="movePinFocus(this,'chpin-2')">
+      <input id="chpin-2" type="tel" inputmode="numeric" maxlength="1" style="width:48px;height:48px;border:1.5px solid #e0e0e0;border-radius:12px;text-align:center;font-size:22px;font-weight:700;font-family:inherit;outline:none;color:#1c3d2e" oninput="movePinFocus(this,'chpin-3')">
+      <input id="chpin-3" type="tel" inputmode="numeric" maxlength="1" style="width:48px;height:48px;border:1.5px solid #e0e0e0;border-radius:12px;text-align:center;font-size:22px;font-weight:700;font-family:inherit;outline:none;color:#1c3d2e" oninput="movePinFocus(this,'chpin-4')">
+      <input id="chpin-4" type="tel" inputmode="numeric" maxlength="1" style="width:48px;height:48px;border:1.5px solid #e0e0e0;border-radius:12px;text-align:center;font-size:22px;font-weight:700;font-family:inherit;outline:none;color:#1c3d2e" oninput="movePinFocus(this,null)">
+    </div>
+    <div id="chpin-error" style="text-align:center;font-size:12px;color:#ff3b30;margin-bottom:10px;min-height:16px"></div>
+    <button onclick="saveChangePIN()" style="width:100%;background:#1c3d2e;color:#fff;border:none;border-radius:50px;padding:14px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:8px">Confirmer</button>
+    <button onclick="closeChangePIN()" style="width:100%;background:none;border:none;color:#8e8e93;padding:10px;font-size:13px;font-weight:500;cursor:pointer;font-family:inherit">Annuler</button>
   </div>
 </div>
 
@@ -569,12 +799,14 @@ var formState = {
 // ── VIEW SWITCHER ─────────────────────────────────────────────────────────────
 function switchView(v){
   document.querySelectorAll('.view').forEach(el=>el.classList.remove('active'));
-  document.querySelectorAll('.nav-tab').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(function(el){el.classList.remove('active');});
   document.getElementById('view-'+v).classList.add('active');
-  var tabs = ['intake','commandes','couturiere'];
-  document.querySelectorAll('.nav-tab')[tabs.indexOf(v)].classList.add('active');
+  var tabMap = {intake:'tab-intake',commandes:'tab-commandes',couturiere:'tab-couturiere',admin:'tab-admin'};
+  var activeTab = document.getElementById(tabMap[v]);
+  if(activeTab) activeTab.classList.add('active');
   if(v==='commandes') renderCommandes();
   if(v==='couturiere') renderCouturiere();
+  if(v==='admin') renderTeam();
 }
 
 // ── FORM SELECTORS ────────────────────────────────────────────────────────────
@@ -595,6 +827,45 @@ function formFieldNav(e, currentId){
     if(prev) prev.focus();
   }
 }
+function acSearch(q){
+  var drop = document.getElementById('ac-dropdown');
+  if(!q || q.length < 2){ drop.classList.remove('open'); return; }
+  // Get unique past clients from commandes
+  var seen = {};
+  var matches = [];
+  commandes.forEach(function(c){
+    var key = c.prenom+'|'+c.nom;
+    if(!seen[key] && (c.prenom+' '+c.nom).toLowerCase().includes(q.toLowerCase())){
+      seen[key] = true;
+      matches.push(c);
+    }
+  });
+  if(!matches.length){ drop.classList.remove('open'); return; }
+  drop.innerHTML = matches.slice(0,5).map(function(c){
+    var initials = (c.prenom[0]||'')+(c.nom[0]||'');
+    return '<div class="ac-item" onmousedown="acFill('+JSON.stringify({prenom:c.prenom,nom:c.nom,tel:c.tel,email:c.email,adresseClient:c.adresseClient||'',ville:c.ville||''})+')">'      +'<div class="ac-avatar">'+initials.toUpperCase()+'</div>'      +'<div class="ac-info"><div class="ac-name">'+c.prenom+' '+c.nom.toUpperCase()+'</div>'      +'<div class="ac-sub">'+c.tel+(c.marque?' · '+c.marque:'')+'</div></div>'      +'</div>';
+  }).join('');
+  drop.classList.add('open');
+}
+
+function acFill(data){
+  document.getElementById('inp-prenom').value = data.prenom;
+  document.getElementById('inp-nom').value = data.nom;
+  document.getElementById('inp-tel').value = data.tel||'';
+  document.getElementById('inp-email').value = data.email||'';
+  var adrc = document.getElementById('inp-adresse-client');
+  if(adrc) adrc.value = data.adresseClient||'';
+  var ville = document.getElementById('inp-ville');
+  if(ville) ville.value = data.ville||'';
+  closeAc();
+  showToast('Client prérempli ✓');
+}
+
+function closeAc(){
+  var drop = document.getElementById('ac-dropdown');
+  if(drop) drop.classList.remove('open');
+}
+
 function formatPhone(inp){
   var raw = inp.value.replace(/[^0-9+]/g,'');
   var formatted = '';
@@ -773,6 +1044,7 @@ function submitForm(){
 function buildConfSummary(cmd){
   var etatLabels = {bon:'Bon état',use:'Usé','tres-use':'Très usé'};
   var delivLabels = {magasin:'Récupération en magasin',livraison:'Envoi postal'};
+  var allRets = cmd.retouches.slice().concat(cmd.extraRetouches||[]);
   var rows = [
     ['Client', cmd.prenom+' '+cmd.nom.toUpperCase()],
     ['Téléphone', cmd.tel],
@@ -832,7 +1104,14 @@ function printOrShare(){
 
 // ── COMMANDES RENDER ──────────────────────────────────────────────────────────
 function renderCommandes(){
-  var filtered = currentFilter==='all' ? commandes : commandes.filter(c=>c.status===currentFilter);
+  var searchEl = document.getElementById('cmd-search');
+  var q = searchEl ? searchEl.value.toLowerCase().trim() : '';
+  var filtered = currentFilter==='all' ? commandes : commandes.filter(function(c){return c.status===currentFilter;});
+  if(q){
+    filtered = filtered.filter(function(c){
+      return (c.prenom+' '+c.nom+' '+c.marque+' '+c.modele+' '+c.couleur+' '+c.ref).toLowerCase().includes(q);
+    });
+  }
   var active = commandes.filter(c=>c.status!=='termine').length;
   document.getElementById('cmd-total-badge').textContent = active+' en cours';
 
@@ -848,7 +1127,7 @@ function renderCommandes(){
     var metas = [retStr,delivStr].filter(Boolean);
     return '<div class="cmd-card" onclick="openDetail('+realIdx+')">'
       +'<div class="cmd-top">'
-      +'<div><div class="cmd-name">'+cmd.prenom+' '+cmd.nom.toUpperCase()+'</div>'
+      +'<div style="display:flex;flex-direction:column;gap:4px">'+(cmd.urgence?'<div style="display:inline-flex;align-items:center;gap:4px;background:#ff3b30;color:#fff;font-size:9px;font-weight:700;padding:1px 6px;border-radius:20px;width:fit-content">🚨 URGENT</div>':'')+'<div class="cmd-name">'+cmd.prenom+' '+cmd.nom.toUpperCase()+'</div>'
       +'<div class="cmd-ref">'+cmd.ref+' · '+cmd.date+'</div></div>'
       +'<div class="status-pill '+st.pill+'">'+st.label+'</div>'
       +'</div>'
@@ -891,7 +1170,7 @@ function renderCommandes(){
           return '<div style="position:absolute;left:'+pct+'%;top:50%;transform:translate(-50%,-50%);width:'+size+'px;height:'+size+'px;border-radius:50%;background:'+bg+';border:2px solid '+border+';display:flex;align-items:center;justify-content:center;z-index:2;'+shadow+'">'+inner+'</div>';
         }).join('');
 
-        return '<div style="margin-top:10px;padding-top:10px;border-top:.5px solid #f0f0f0">'
+        return '<div style="margin-top:10px;padding-top:6px">'
           +'<div style="position:relative;height:18px;margin:0 32px">'
           // base track
           +'<div style="position:absolute;top:50%;left:0;right:0;height:2px;background:#ebebeb;border-radius:99px;transform:translateY(-50%)"></div>'
@@ -900,7 +1179,7 @@ function renderCommandes(){
           // nodes
           +nodes
           +'</div>'
-          +'<div style="position:relative;height:28px;margin:6px 32px 0">'+labelsHtml+'</div>'
+          +(function(){ var hasDates = STATUSES.some(function(s){ return cmd.statusDates&&cmd.statusDates[s.key]; }); return '<div style="position:relative;height:'+(hasDates?'28':'18')+'px;margin:6px 32px 0">'+labelsHtml+'</div>'; })()
           +'</div>';
       })()
       +'</div>';
@@ -925,11 +1204,35 @@ function openDetail(idx){
   document.getElementById('d-veste').textContent = [cmd.marque,cmd.modele,cmd.couleur,cmd.taille].filter(function(v){return v&&v!='—';}).join(' — ');
   renderDetailSteps(cmd);
   renderDetailBody(cmd);
+  var urgBtn = document.getElementById('urgence-btn');
+  var urgIco = document.getElementById('urgence-icon');
+  if(urgBtn){ urgBtn.style.background = cmd.urgence ? '#ff3b30' : 'rgba(255,255,255,.8)'; urgBtn.style.border = cmd.urgence ? '2px solid #ff3b30' : '.5px solid rgba(0,0,0,.08)'; }
+  if(urgIco){ urgIco.style.stroke = cmd.urgence ? '#fff' : '#8e8e93'; }
   document.getElementById('cmd-detail').classList.add('open');
 }
 
 function closeDetail(){
   document.getElementById('cmd-detail').classList.remove('open');
+}
+
+function toggleUrgence(){
+  if(detailIdx===null) return;
+  var cmd = commandes[detailIdx];
+  cmd.urgence = !cmd.urgence;
+  var btn = document.getElementById('urgence-btn');
+  var ico = document.getElementById('urgence-icon');
+  if(cmd.urgence){
+    btn.style.background = '#ff3b30';
+    btn.style.border = '2px solid #ff3b30';
+    if(ico) ico.style.stroke = '#fff';
+  } else {
+    btn.style.background = 'rgba(255,255,255,.8)';
+    btn.style.border = '.5px solid rgba(0,0,0,.08)';
+    if(ico) ico.style.stroke = '#8e8e93';
+  }
+  saveData();
+  renderCommandes();
+  showToast(cmd.urgence ? '🚨 Marquée urgente' : 'Urgence retirée');
 }
 
 function renderDetailSteps(cmd){
@@ -984,11 +1287,13 @@ function renderDetailBody(cmd){
   var retLabels = {doublure:'Doublure intérieure',fermeture:'Fermeture éclair',boutons:'Boutons / boutonnière',manchettes:'Manchettes',coutures:'Coutures décollées',col:'Col / revers',autre:'Autre'};
   var etatMap = {bon:'✅ Bon',use:'🔶 Usé','tres-use':'🔴 Très usé'};
 var etatTxt = etatMap[cmd.etat]||cmd.etat;
+  var allRets = cmd.retouches.slice().concat(cmd.extraRetouches||[]);
   var rows = [
     ['Téléphone',cmd.tel],['Email',cmd.email||'—'],['Adresse',[cmd.adresseClient,cmd.ville].filter(Boolean).join(', ')||'—'],
     ['Marque',cmd.marque],['Modèle',cmd.modele||'—'],['Couleur',cmd.couleur],['Taille',cmd.taille],
     ['État',etatTxt],
     ['Cirage',cmd.cirage==='premier'?'Premier cirage':'Rewaxing '+(cmd.rewaxCount?'· '+cmd.rewaxCount+'e fois':'')],
+    ['Retouches', cmd.retouche && allRets.length ? allRets.join(', ') : 'Non'],
     ...(cmd.retCustom?[['Retouche libre',cmd.retCustom]]:[]),
     ...(cmd.retNote?[['Note couturière',cmd.retNote]]:[]),
     ['Facturation','60 CHF · Lido Vevey'],
@@ -1105,6 +1410,12 @@ function confirmModalAction(){
       showToast('Commande supprimée');
       detailIdx=null;
     }
+  } else if(action==='delete_member'){
+    if(_pendingMemberId){
+      users = users.filter(function(u){return u.id!==_pendingMemberId;});
+      saveUsers(); renderTeam(); showToast('Membre supprimé');
+    }
+    _pendingMemberId = null;
   } else if(action==='delete_extra'){
     if(_coutIdx!==null && _pendingRetKey!==null){
       var ei=parseInt(_pendingRetKey.replace('extra_del_',''));
@@ -1130,7 +1441,10 @@ function toggleRetoucheDone(idx, key){
 // ── COUTURIÈRE RENDER ─────────────────────────────────────────────────────────
 function renderCouturiere(){
   var retLabels = {doublure:'Doublure intérieure',fermeture:'Fermeture éclair',boutons:'Boutons / boutonnière',manchettes:'Manchettes',coutures:'Coutures décollées',col:'Col / revers',autre:'Autre'};
-  var couts = commandes.filter(c=>c.retouche && c.status!=='termine' && c.retouches.length);
+  var searchQ = document.getElementById('cout-search');
+  var cq = searchQ ? searchQ.value.toLowerCase().trim() : '';
+  var couts = commandes.filter(function(c){ return c.retouche && c.status!=='termine' && c.retouches.length; });
+  if(cq){ couts = couts.filter(function(c){ return (c.prenom+' '+c.nom+' '+c.marque+' '+c.modele).toLowerCase().includes(cq); }); }
   var pending = couts.filter(function(c){
     var all = c.retouches.slice(); if(c.extraRetouches) all=all.concat(c.extraRetouches);
     return all.length===0 || !all.every(function(r,i){return !!c.retoucheDone['k_'+i];});
@@ -1176,10 +1490,14 @@ function renderCouturiere(){
       +'</div>';
 
     return '<div class="cout-card">'
-      +'<div class="cout-top"><div>'
-      +'<div class="cout-client">'+cmd.prenom+' '+cmd.nom.toUpperCase()+'</div>'
-      +'<div class="cout-ref">'+cmd.ref+' \xb7 '+[cmd.marque,cmd.modele,cmd.couleur,cmd.taille].filter(function(v){return v&&v!='\u2014';}).join(' \xb7 ')+'</div>'
-      +'</div>'
+      +(function(){
+        var dateRet = cmd.statusDates&&cmd.statusDates.retouche ? fmtDate(cmd.statusDates.retouche) : cmd.date;
+        return '<div class="cout-top"><div>'
+          +'<div class="cout-client">'+cmd.prenom+' '+cmd.nom.toUpperCase()+'</div>'
+          +'<div class="cout-ref">'+cmd.ref+' \xb7 '+[cmd.marque,cmd.modele,cmd.couleur,cmd.taille].filter(function(v){return v&&v!='\u2014';}).join(' \xb7 ')+'</div>'
+          +'<div style="font-size:11px;color:#8e8e93;margin-top:3px">Reçue le '+dateRet+'</div>'
+          +'</div>';
+      })()
       +'<div class="cout-urgency '+(allDone?'done':'')+'">'+(allDone?'\u2713 Fait':'\u00c0 faire')+'</div>'
       +'</div>'
       +rows
@@ -1187,10 +1505,162 @@ function renderCouturiere(){
       +readyBtn
       +'</div>';
   }).join('');
-  document.getElementById('cout-list').innerHTML = html;
+  // ── History: terminated retouches ──────────────────────────────────────────
+  var terminated = commandes.filter(function(c){ return c.retouche && c.status==='termine' && c.retouches.length; });
+  // Sort newest first
+  terminated = terminated.slice().sort(function(a,b){ return (b.dateRaw||'')>(a.dateRaw||'')?1:-1; });
+
+  // Static demo history if no real terminated ones
+  var demoHistory = [
+    {ref:'BWX-LIDO-H1',prenom:'Arnaud',nom:'Favre',marque:'Barbour',modele:'Beaufort',dateRetouche:'3 jan. 2026',dateFin:'5 jan. 2026',rets:['Doublure intérieure','Fermeture éclair']},
+    {ref:'BWX-LIDO-H2',prenom:'Claire',nom:'Rochat',marque:'Filson',modele:'',dateRetouche:'12 fév. 2026',dateFin:'14 fév. 2026',rets:['Manchettes']},
+    {ref:'BWX-LIDO-H3',prenom:'Pierre',nom:'Maillard',marque:'Belstaff',modele:'Trialmaster',dateRetouche:'8 mar. 2026',dateFin:'11 mar. 2026',rets:['Coutures décollées','Col / revers']},
+    {ref:'BWX-LIDO-H4',prenom:'Sophie',nom:'Blanc',marque:'Barbour',modele:'Bedale',dateRetouche:'2 avr. 2026',dateFin:'3 avr. 2026',rets:['Boutons / boutonnière']},
+  ];
+
+  var isDemo = terminated.length === 0;
+  var allHistItems = isDemo ? demoHistory : terminated;
+  var recentItems = allHistItems.slice(0,3);
+  var moreItems   = allHistItems.slice(3);
+  var histHtml = '<div class="sec-lbl" style="margin-top:16px">Historique retouches</div>';
+
+  function buildDateCells(d){
+  if(!d||d==='—') return '<td colspan="3">—</td>';
+  var p = d.split(' ');
+  var day=p[0]||'', month=p[1]||'', year=p[2]||'';
+  return '<td style="text-align:right;font-variant-numeric:tabular-nums;padding-right:3px;font-weight:500">'+day+'</td>'
+        +'<td style="padding-right:3px;font-weight:500">'+month+'</td>'
+        +'<td style="font-variant-numeric:tabular-nums;font-weight:500">'+year+'</td>';
+}
+
+function buildHistCard(item, globalIdx){
+    var name = item.prenom+' '+item.nom.toUpperCase();
+    var vest = isDemo ? [item.marque,item.modele].filter(Boolean).join(' ') : [item.marque,item.modele].filter(function(v){return v&&v!='\u2014';}).join(' ');
+    var dateIn  = isDemo ? item.dateRetouche : (item.statusDates&&item.statusDates.retouche?fmtDate(item.statusDates.retouche):'\u2014');
+    var dateOut = isDemo ? item.dateFin      : (item.statusDates&&item.statusDates.termine?fmtDate(item.statusDates.termine):'\u2014');
+    var rets = isDemo ? item.rets : item.retouches.concat(item.extraRetouches||[]);
+    var retsStr = rets.slice(0,2).join(', ')+(rets.length>2?' +'+(rets.length-2):'');
+    var dataIdx = isDemo ? 'demo-'+globalIdx : String(commandes.indexOf(item));
+    return '<div class="hist-card hist-clickable" data-histidx="'+dataIdx+'">'
+      +'<div class="hist-top"><div class="hist-name">'+name+'</div><div class="hist-done">\u2713 Termin\u00e9</div></div>'
+      +'<div style="display:flex;justify-content:space-between;align-items:flex-end;margin-top:4px;gap:8px">'
+      +'<div>'
+      +'<div style="font-size:11px;color:#1c1c1e;line-height:1.5">'+vest+'</div>'
+      +'<div class="hist-rets">'+retsStr+'</div>'
+      +'</div>'
+      +'<div style="text-align:right;flex-shrink:0">'
+      +'<table style="font-size:10px;border-collapse:collapse;line-height:1.5"><tr><td style="color:#8e8e93;font-weight:500;padding-right:6px">En</td>'+buildDateCells(dateIn)+'</tr><tr><td style="color:#8e8e93;font-weight:500;padding-right:6px">Fin</td>'+buildDateCells(dateOut)+'</tr></table>'
+      +'</div>'
+      +'</div>'
+      +'</div>';
+  }
+
+  histHtml += recentItems.map(function(item,i){ return buildHistCard(item,i); }).join('');
+
+  if(moreItems.length){
+    histHtml += '<div id="hist-more" style="display:none">'
+      + moreItems.map(function(item,i){ return buildHistCard(item,i+3); }).join('') +'</div>';
+    histHtml += '<button onclick="toggleHistMore(this)" style="width:100%;background:#1c3d2e;color:#fff;border:none;border-radius:50px;padding:11px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:6px;letter-spacing:.02em;opacity:.75;display:flex;align-items:center;justify-content:center;gap:6px"><span>Afficher plus</span><svg viewBox=\"0 0 24 24\" style=\"width:12px;height:12px;stroke:#fff;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round\"><polyline points=\"6 9 12 15 18 9\"/></svg></button>';
+  }
+
+  document.getElementById('cout-list').innerHTML = html + histHtml;
+  // Bind history card clicks
+  document.querySelectorAll('.hist-clickable').forEach(function(el){
+    el.addEventListener('click', function(){
+      openHistDetail(el.getAttribute('data-histidx'));
+    });
+  });
+  document.querySelectorAll('.hist-full').forEach(function(el){
+    el.addEventListener('click', function(){
+      closeFullHistory();
+      openHistDetail(el.getAttribute('data-histidx'));
+    });
+  });
+}
+
+var _histDemoData = [
+  {ref:'BWX-LIDO-H1',prenom:'Arnaud',nom:'Favre',marque:'Barbour',modele:'Beaufort',dateRetouche:'3 jan. 2026',dateFin:'5 jan. 2026',rets:['Doublure intérieure','Fermeture éclair'],note:'Doublure décollée côté droit'},
+  {ref:'BWX-LIDO-H2',prenom:'Claire',nom:'Rochat',marque:'Filson',modele:'',dateRetouche:'12 fév. 2026',dateFin:'14 fév. 2026',rets:['Manchettes'],note:''},
+  {ref:'BWX-LIDO-H3',prenom:'Pierre',nom:'Maillard',marque:'Belstaff',modele:'Trialmaster',dateRetouche:'8 mar. 2026',dateFin:'11 mar. 2026',rets:['Coutures décollées','Col / revers'],note:'Couture dos sur 8cm'},
+  {ref:'BWX-LIDO-H4',prenom:'Sophie',nom:'Blanc',marque:'Barbour',modele:'Bedale',dateRetouche:'2 avr. 2026',dateFin:'3 avr. 2026',rets:['Boutons / boutonnière'],note:''},
+];
+
+function openHistDetail(dataIdx){
+  var item, name, vest, dateIn, dateOut, rets, note, ref;
+  if(dataIdx.startsWith('demo-')){
+    var i = parseInt(dataIdx.replace('demo-',''));
+    item = _histDemoData[i];
+    name = item.prenom+' '+item.nom.toUpperCase();
+    vest = [item.marque,item.modele].filter(Boolean).join(' ');
+    dateIn = item.dateRetouche; dateOut = item.dateFin;
+    rets = item.rets; note = item.note; ref = item.ref;
+  } else {
+    var idx = parseInt(dataIdx);
+    var cmd = commandes[idx];
+    if(!cmd) return;
+    name = cmd.prenom+' '+cmd.nom.toUpperCase();
+    vest = [cmd.marque,cmd.modele,cmd.couleur,cmd.taille].filter(function(v){return v&&v!='—';}).join(' · ');
+    dateIn = cmd.statusDates&&cmd.statusDates.retouche?fmtDate(cmd.statusDates.retouche):'—';
+    dateOut = cmd.statusDates&&cmd.statusDates.termine?fmtDate(cmd.statusDates.termine):'—';
+    rets = cmd.retouches.concat(cmd.extraRetouches||[]);
+    note = cmd.retNote||''; ref = cmd.ref;
+  }
+  var html = '<div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">'
+    +'<div onclick="closeHistDetail(null)" style="width:32px;height:32px;border-radius:50%;background:#e8e8e8;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;touch-action:manipulation"><svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:#1c1c1e;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round"><polyline points="15 18 9 12 15 6"/></svg></div>'
+    +'<div style="font-size:16px;font-weight:700;color:#1c1c1e">Détail retouche</div>'
+    +'</div>'
+    +'<div style="font-size:17px;font-weight:700;color:#1c1c1e;margin-bottom:2px">'+name+'</div>'
+    +'<div style="font-size:12px;color:#8e8e93;margin-bottom:16px">'+ref+' · '+vest+'</div>'
+    +'<div class="card" style="margin-bottom:12px">'
+    +'<div class="field-row no-tap"><div class="field-label">Envoyée le</div><div class="field-val">'+dateIn+'</div></div>'
+    +'<div class="field-row no-tap" style="border-bottom:none"><div class="field-label">Terminée le</div><div class="field-val accent">'+dateOut+'</div></div>'
+    +'</div>'
+    +'<div class="sec-lbl">Retouches effectuées</div>'
+    +'<div class="card"><div style="padding:8px 16px">'
+    +rets.map(function(r){ return '<div style="display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:.5px solid #f5f5f5"><div style="width:16px;height:16px;border-radius:50%;background:#e8f0eb;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg viewBox=\"0 0 24 24\" style=\"width:8px;height:8px;stroke:#1c3d2e;stroke-width:3;fill:none;stroke-linecap:round\"><polyline points=\"20 6 9 17 4 12\"/></svg></div><div style=\"font-size:13px;font-weight:500;color:#1c1c1e\">'+r+'</div></div>'; }).join('')
+    +'</div></div>'
+    +(note?'<div class="sec-lbl">Note</div><div class="ta-card"><div class="ta-input">'+note+'</div></div>':'');
+  document.getElementById('hist-sheet-content').innerHTML = html;
+  document.getElementById('hist-detail-overlay').classList.add('open');
+}
+
+function closeHistDetail(e){
+  if(!e||e.target===document.getElementById('hist-detail-overlay'))
+    document.getElementById('hist-detail-overlay').classList.remove('open');
+}
+
+function openFullHistory(){
+  // Show all terminated retouches
+  var terminated = commandes.filter(function(c){ return c.retouche && c.status==='termine'; });
+  var allItems = terminated.length ? terminated : _histDemoData;
+  var html = '<div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">'
+    +'<div onclick="closeFullHistory()" style="width:32px;height:32px;border-radius:50%;background:#e8e8e8;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;touch-action:manipulation"><svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:#1c1c1e;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round"><polyline points="15 18 9 12 15 6"/></svg></div>'
+    +'<div style="font-size:16px;font-weight:700;color:#1c1c1e">Historique complet 2026</div>'
+    +'</div>';
+  allItems.forEach(function(item,i){
+    var isDemo = terminated.length===0;
+    var name = item.prenom+' '+item.nom.toUpperCase();
+    var vest = isDemo ? [item.marque,item.modele].filter(Boolean).join(' ') : [item.marque,item.modele].filter(function(v){return v&&v!='—';}).join(' ');
+    var dateIn = isDemo ? item.dateRetouche : (item.statusDates&&item.statusDates.retouche?fmtDate(item.statusDates.retouche):'—');
+    var dateOut = isDemo ? item.dateFin : (item.statusDates&&item.statusDates.termine?fmtDate(item.statusDates.termine):'—');
+    var rets = isDemo ? item.rets : item.retouches.concat(item.extraRetouches||[]);
+    var dataIdx = isDemo ? 'demo-'+i : String(commandes.indexOf(item));
+    html += '<div class="hist-card hist-clickable hist-full" data-histidx="'+dataIdx+'">'
+      +'<div class="hist-top"><div class="hist-name">'+name+'</div><div class="hist-done">✓</div></div>'
+      +'<div class="hist-meta">'+vest+' · En: '+dateIn+' · Fin: '+dateOut+'</div>'
+      +'<div class="hist-rets">'+rets.join(', ')+'</div>'
+      +'</div>';
+  });
+  document.getElementById('hist-sheet-content').innerHTML = html;
+  document.getElementById('hist-detail-overlay').classList.add('open');
+}
+
+function closeFullHistory(){
+  document.getElementById('hist-detail-overlay').classList.remove('open');
 }
 
 var _pendingRetKey = null;
+var _pendingMemberId = null;
 var _coutIdx = null;
 
 function coutCheckClick(idx, key, isDone){
@@ -1278,6 +1748,27 @@ function fmtDate(iso){
   return dd+' '+mm+' '+yy;
 }
 // ────────────────────────────────────────────────────────────────────
+function toggleHistMore(btn){
+  var el = document.getElementById('hist-more');
+  if(!el) return;
+  var open = el.style.maxHeight && el.style.maxHeight !== '0px' && el.style.maxHeight !== '0';
+  if(!open){
+    el.style.display = 'block';
+    el.style.maxHeight = '0';
+    el.style.opacity = '0';
+    requestAnimationFrame(function(){
+      el.style.maxHeight = el.scrollHeight + 'px';
+      el.style.opacity = '1';
+    });
+    btn.innerHTML = '<span>Afficher moins</span><svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:#fff;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round"><polyline points="6 15 12 9 18 15"/></svg>';
+  } else {
+    el.style.maxHeight = '0';
+    el.style.opacity = '0';
+    setTimeout(function(){ el.style.display = 'none'; }, 380);
+    btn.innerHTML = '<span>Afficher plus</span><svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:#fff;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round"><polyline points="6 9 12 15 18 9"/></svg>';
+  }
+}
+
 function saveData(){
   localStorage.setItem('bwx_b2b_cmds', JSON.stringify(commandes));
 }
@@ -1292,8 +1783,535 @@ function showToast(msg){
 // Fix for hyphenated key in object literal
 // handled by using bracket notation in templates above
 
+// ── AUTH ─────────────────────────────────────────────────────────────────────
+var currentUser = null;
+var currentPin = '';
+
+// Always sync default users by PIN to ensure names are up to date
+var users = JSON.parse(localStorage.getItem('bwx_users') || '[]');
+var defaults = [
+  {id:'u1', name:'Julien Brunschwig', role:'admin',      pin:'1234'},
+  {id:'u2', name:'Noëlle',            role:'vendeur',     pin:'2222'},
+  {id:'u3', name:'Paula',             role:'couturiere',  pin:'3333'}
+];
+defaults.forEach(function(def){
+  var existing = users.find(function(u){return u.pin===def.pin;});
+  if(existing){ existing.name=def.name; existing.role=def.role; }
+  else if(!users.find(function(u){return u.id===def.id;})) users.push(def);
+});
+if(!users.length) users = defaults.slice();
+localStorage.setItem('bwx_users', JSON.stringify(users));
+
+function saveUsers(){ localStorage.setItem('bwx_users', JSON.stringify(users)); }
+
+function pinInput(d){
+  if(currentPin.length >= 4) return;
+  currentPin += d;
+  updatePinDots();
+  if(currentPin.length === 4) setTimeout(checkPin, 80);
+}
+
+function pinDelete(){
+  currentPin = currentPin.slice(0,-1);
+  updatePinDots();
+  document.getElementById('pin-error').textContent = '';
+}
+
+function pinClear(){
+  currentPin = '';
+  updatePinDots();
+  document.getElementById('pin-error').textContent = '';
+}
+
+function updatePinDots(){
+  for(var i=0;i<4;i++){
+    var d = document.getElementById('d'+i);
+    if(d) d.classList.toggle('filled', i < currentPin.length);
+  }
+}
+
+function checkPin(){
+  var match = users.find(function(u){ return u.pin === currentPin; });
+  if(match){
+    currentUser = match;
+    document.getElementById('login-screen').style.display = 'none';
+  
+    document.getElementById('partnerBadge').textContent = match.name;
+  var pb=document.getElementById('profile-btn'); if(pb) pb.style.display='flex';
+    applyRole(match.role);
+    currentPin = '';
+    updatePinDots();
+  } else {
+    document.getElementById('pin-error').textContent = 'Code incorrect, réessayez';
+    currentPin = '';
+    updatePinDots();
+  }
+}
+
+function applyRole(role){
+  var tabIntake     = document.getElementById('tab-intake');
+  var tabCommandes  = document.getElementById('tab-commandes');
+  var tabCouturiere = document.getElementById('tab-couturiere');
+  var tabAdmin      = document.getElementById('tab-admin');
+
+  // Hide all first
+  [tabIntake, tabCommandes, tabCouturiere, tabAdmin].forEach(function(t){ if(t) t.style.display='none'; });
+
+  if(role === 'admin'){
+    [tabIntake, tabCommandes, tabCouturiere, tabAdmin].forEach(function(t){ if(t) t.style.display=''; });
+    switchView('commandes');
+  } else if(role === 'vendeur'){
+    [tabIntake, tabCommandes, tabCouturiere].forEach(function(t){ if(t) t.style.display=''; });
+    switchView('commandes');
+  } else if(role === 'couturiere'){
+    if(tabCouturiere) tabCouturiere.style.display = '';
+    switchView('couturiere');
+  }
+}
+
+function openChangePIN(){
+  ['chpin-1','chpin-2','chpin-3','chpin-4'].forEach(function(id){ document.getElementById(id).value=''; });
+  document.getElementById('chpin-error').textContent='';
+  document.getElementById('change-pin-modal').style.display='flex';
+  setTimeout(function(){ document.getElementById('chpin-1').focus(); }, 100);
+}
+
+function closeChangePIN(){
+  document.getElementById('change-pin-modal').style.display='none';
+}
+
+function saveChangePIN(){
+  var pin = ['chpin-1','chpin-2','chpin-3','chpin-4'].map(function(id){ return document.getElementById(id).value; }).join('');
+  if(pin.length!==4 || pin.split('').some(function(c){return c<'0'||c>'9';})){ 
+    document.getElementById('chpin-error').textContent='4 chiffres requis'; return; 
+  }
+  var conflict = users.find(function(u){ return u.pin===pin && u.id!==currentUser.id; });
+  if(conflict){ document.getElementById('chpin-error').textContent='Ce PIN est déjà utilisé'; return; }
+  currentUser.pin = pin;
+  var u = users.find(function(u){ return u.id===currentUser.id; });
+  if(u) u.pin = pin;
+  saveUsers();
+  closeChangePIN();
+  showToast('Code PIN modifié ✓');
+}
+
+function doLogout(){
+  currentUser = null;
+  currentPin = '';
+  updatePinDots();
+  document.getElementById('pin-error').textContent = '';
+  document.getElementById('login-screen').style.display = 'flex';
+  var pb=document.getElementById('profile-btn'); if(pb) pb.style.display='none';
+  // Hide all tabs
+  ['tab-intake','tab-commandes','tab-couturiere','tab-admin'].forEach(function(id){
+    var t = document.getElementById(id); if(t) t.style.display='none';
+  });
+}
+
+// ── ADMIN TEAM MANAGEMENT ─────────────────────────────────────────────────────
+var editingUserId = null;
+
+function renderTeam(){
+  var roleLabels = {admin:'Admin',vendeur:'Vendeuse',couturiere:'Couturière'};
+  var roleInit   = {admin:'A',vendeur:'V',couturiere:'C'};
+  document.getElementById('team-count').textContent = users.length+' membre'+(users.length>1?'s':'');
+  var html = users.map(function(u){
+    var canDel = currentUser && u.id !== currentUser.id;
+    var trashSvg = canDel
+      ? '<div class="del-user-btn" data-uid="'+u.id+'" style="margin-left:10px;cursor:pointer;opacity:.4;touch-action:manipulation;flex-shrink:0"><svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:#ff3b30;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M9 6V4h6v2"/></svg></div>'
+      : '';
+    return '<div class="admin-user-card">'
+      +'<div class="admin-avatar role-'+u.role+'">'+roleInit[u.role]+'</div>'
+      +'<div class="admin-user-info"><div class="admin-user-name">'+u.name+'</div>'
+      +'<div class="admin-user-role">'+roleLabels[u.role]+'</div></div>'
+      +'<div class="admin-user-pin">'+u.pin+'</div>'
+      +trashSvg
+      +'</div>';
+  }).join('');
+  document.getElementById('team-list').innerHTML = html;
+  // Bind delete buttons
+  document.querySelectorAll('.del-user-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ deleteUser(btn.getAttribute('data-uid')); });
+  });
+}
+
+function openAddUser(){
+  editingUserId = null;
+  document.getElementById('add-user-title').textContent = 'Nouveau membre';
+  document.getElementById('new-user-name').value = '';
+  document.getElementById('new-user-role').value = 'vendeur';
+  ['new-pin-1','new-pin-2','new-pin-3','new-pin-4'].forEach(function(id){ document.getElementById(id).value=''; });
+  document.getElementById('add-user-error').textContent = '';
+  document.getElementById('add-user-modal').style.display = 'flex';
+  setTimeout(function(){ document.getElementById('new-user-name').focus(); }, 100);
+}
+
+function closeAddUser(){
+  document.getElementById('add-user-modal').style.display = 'none';
+}
+
+function movePinFocus(el, nextId){
+  if(el.value.length >= 1 && nextId){
+    var next = document.getElementById(nextId);
+    if(next) next.focus();
+  }
+}
+
+function saveNewUser(){
+  var name = document.getElementById('new-user-name').value.trim();
+  var role = document.getElementById('new-user-role').value;
+  var pin = ['new-pin-1','new-pin-2','new-pin-3','new-pin-4'].map(function(id){ return document.getElementById(id).value; }).join('');
+  if(!name){ document.getElementById('add-user-error').textContent = 'Entrez un prénom'; return; }
+  if(pin.length !== 4 || !/^[0-9]{4}$/.test(pin)){ document.getElementById('add-user-error').textContent = 'PIN: 4 chiffres requis'; return; }
+  if(users.find(function(u){ return u.pin === pin; })){ document.getElementById('add-user-error').textContent = 'Ce PIN est déjà utilisé'; return; }
+  users.push({id:'u'+Date.now(), name:name, role:role, pin:pin});
+  saveUsers();
+  closeAddUser();
+  renderTeam();
+  showToast(name+' ajouté ✓');
+}
+
+function deleteUser(uid){
+  users = users.filter(function(u){ return u.id !== uid; });
+  saveUsers();
+  renderTeam();
+  showToast('Membre supprimé');
+}
+
+// ── AUTH ─────────────────────────────────────────────────────────────────────
+var currentUser = null;
+var currentPin = '';
+
+// Always sync default users by PIN to ensure names are up to date
+var users = JSON.parse(localStorage.getItem('bwx_users') || '[]');
+var defaults = [
+  {id:'u1', name:'Julien Brunschwig', role:'admin',      pin:'1234'},
+  {id:'u2', name:'Noëlle',            role:'vendeur',     pin:'2222'},
+  {id:'u3', name:'Paula',             role:'couturiere',  pin:'3333'}
+];
+defaults.forEach(function(def){
+  var existing = users.find(function(u){return u.pin===def.pin;});
+  if(existing){ existing.name=def.name; existing.role=def.role; }
+  else if(!users.find(function(u){return u.id===def.id;})) users.push(def);
+});
+if(!users.length) users = defaults.slice();
+localStorage.setItem('bwx_users', JSON.stringify(users));
+
+function saveUsers(){ localStorage.setItem('bwx_users', JSON.stringify(users)); }
+
+function pinInput(d){
+  if(currentPin.length >= 4) return;
+  currentPin += d;
+  updatePinDots();
+  if(currentPin.length === 4) setTimeout(checkPin, 80);
+}
+
+function pinDelete(){
+  currentPin = currentPin.slice(0,-1);
+  updatePinDots();
+  document.getElementById('pin-error').textContent = '';
+}
+
+function pinClear(){
+  currentPin = '';
+  updatePinDots();
+  document.getElementById('pin-error').textContent = '';
+}
+
+function updatePinDots(){
+  for(var i=0;i<4;i++){
+    var d = document.getElementById('d'+i);
+    if(d) d.classList.toggle('filled', i < currentPin.length);
+  }
+}
+
+function checkPin(){
+  var match = users.find(function(u){ return u.pin === currentPin; });
+  if(match){
+    currentUser = match;
+    document.getElementById('login-screen').style.display = 'none';
+  
+    document.getElementById('partnerBadge').textContent = match.name;
+  var pb=document.getElementById('profile-btn'); if(pb) pb.style.display='flex';
+    applyRole(match.role);
+    currentPin = '';
+    updatePinDots();
+  } else {
+    document.getElementById('pin-error').textContent = 'Code incorrect, réessayez';
+    currentPin = '';
+    updatePinDots();
+  }
+}
+
+function applyRole(role){
+  ['tab-intake','tab-commandes','tab-couturiere','tab-admin'].forEach(function(id){
+    var t = document.getElementById(id); if(t) t.style.display='none';
+  });
+  if(role === 'admin'){
+    ['tab-intake','tab-commandes','tab-couturiere','tab-admin'].forEach(function(id){
+      var t = document.getElementById(id); if(t) t.style.display='';
+    });
+    switchView('commandes');
+  } else if(role === 'vendeur'){
+    ['tab-intake','tab-commandes','tab-couturiere'].forEach(function(id){
+      var t = document.getElementById(id); if(t) t.style.display='';
+    });
+    switchView('commandes');
+  } else if(role === 'couturiere'){
+    var t = document.getElementById('tab-couturiere'); if(t) t.style.display='';
+    switchView('couturiere');
+  }
+}
+
+function openChangePIN(){
+  ['chpin-1','chpin-2','chpin-3','chpin-4'].forEach(function(id){ document.getElementById(id).value=''; });
+  document.getElementById('chpin-error').textContent='';
+  document.getElementById('change-pin-modal').style.display='flex';
+  setTimeout(function(){ document.getElementById('chpin-1').focus(); }, 100);
+}
+
+function closeChangePIN(){
+  document.getElementById('change-pin-modal').style.display='none';
+}
+
+function saveChangePIN(){
+  var pin = ['chpin-1','chpin-2','chpin-3','chpin-4'].map(function(id){ return document.getElementById(id).value; }).join('');
+  if(pin.length!==4 || pin.split('').some(function(c){return c<'0'||c>'9';})){ 
+    document.getElementById('chpin-error').textContent='4 chiffres requis'; return; 
+  }
+  var conflict = users.find(function(u){ return u.pin===pin && u.id!==currentUser.id; });
+  if(conflict){ document.getElementById('chpin-error').textContent='Ce PIN est déjà utilisé'; return; }
+  currentUser.pin = pin;
+  var u = users.find(function(u){ return u.id===currentUser.id; });
+  if(u) u.pin = pin;
+  saveUsers();
+  closeChangePIN();
+  showToast('Code PIN modifié ✓');
+}
+
+function doLogout(){
+  currentUser = null;
+  currentPin = '';
+  updatePinDots();
+  document.getElementById('pin-error').textContent = '';
+  document.getElementById('login-screen').style.display = 'flex';
+  var pb=document.getElementById('profile-btn'); if(pb) pb.style.display='none';
+  ['tab-intake','tab-commandes','tab-couturiere','tab-admin'].forEach(function(id){
+    var t = document.getElementById(id); if(t) t.style.display='none';
+  });
+  // Hide all views
+  document.querySelectorAll('.view').forEach(function(v){ v.classList.remove('active'); });
+}
+
+// ── ADMIN TEAM ────────────────────────────────────────────────────────────────
+function renderTeam(){
+  var roleLabels = {admin:'Admin',vendeur:'Vendeuse',couturiere:'Couturière'};
+  var roleInit   = {admin:'A',vendeur:'V',couturiere:'C'};
+  document.getElementById('team-count').textContent = users.length+' membre'+(users.length>1?'s':'');
+  var html = users.map(function(u){
+    var canDel = currentUser && u.id !== currentUser.id;
+    var trashBtn = canDel
+      ? '<div class="del-user-btn" data-uid="'+u.id+'" style="margin-left:10px;cursor:pointer;opacity:.4;touch-action:manipulation;flex-shrink:0"><svg viewBox="0 0 24 24" style="width:15px;height:15px;stroke:#ff3b30;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M9 6V4h6v2"/></svg></div>'
+      : '';
+    return '<div class="admin-user-card">'
+      +'<div class="admin-avatar role-'+u.role+'">'+roleInit[u.role]+'</div>'
+      +'<div class="admin-user-info"><div class="admin-user-name">'+u.name+'</div>'
+      +'<div class="admin-user-role">'+roleLabels[u.role]+'</div></div>'
+      +'<div class="admin-user-pin">'+u.pin+'</div>'
+      +trashBtn
+      +'</div>';
+  }).join('');
+  document.getElementById('team-list').innerHTML = html;
+  document.querySelectorAll('.del-user-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ deleteUser(btn.getAttribute('data-uid')); });
+  });
+}
+function openAddUser(){
+  document.getElementById('new-user-name').value='';
+  document.getElementById('new-user-role').value='vendeur';
+  ['new-pin-1','new-pin-2','new-pin-3','new-pin-4'].forEach(function(id){document.getElementById(id).value='';});
+  document.getElementById('add-user-error').textContent='';
+  document.getElementById('add-user-modal').style.display='flex';
+  setTimeout(function(){document.getElementById('new-user-name').focus();},100);
+}
+
+function closeAddUser(){
+  document.getElementById('add-user-modal').style.display='none';
+}
+
+function movePinFocus(el, nextId){
+  if(el.value.length>=1 && nextId){ var n=document.getElementById(nextId); if(n) n.focus(); }
+}
+
+function saveNewUser(){
+  var name = document.getElementById('new-user-name').value.trim();
+  var role = document.getElementById('new-user-role').value;
+  var pin  = ['new-pin-1','new-pin-2','new-pin-3','new-pin-4'].map(function(id){return document.getElementById(id).value;}).join('');
+  if(!name){ document.getElementById('add-user-error').textContent='Entrez un prénom'; return; }
+  if(pin.length!==4 || pin.split('').some(function(c){return c<'0'||c>'9';})){ document.getElementById('add-user-error').textContent='PIN: 4 chiffres requis'; return; }
+  if(users.find(function(u){return u.pin===pin;})){ document.getElementById('add-user-error').textContent='Ce PIN est déjà utilisé'; return; }
+  users.push({id:'u'+Date.now(),name:name,role:role,pin:pin});
+  saveUsers(); closeAddUser(); renderTeam();
+  showToast(name+' ajouté ✓');
+}
+
+function deleteUser(uid){
+  var u = users.find(function(x){return x.id===uid;});
+  if(!u) return;
+  _pendingAction = 'delete_member';
+  _pendingMemberId = uid;
+  document.getElementById('modal-title').textContent = 'Supprimer ce membre ?';
+  document.getElementById('modal-body').textContent = u.name+' sera retiré de l’équipe. Cette action est irréversible.';
+  document.getElementById('modal-confirm-btn').textContent = 'Supprimer';
+  document.getElementById('modal-confirm-btn').style.background = '#ff3b30';
+  openModal();
+}
+
+
+// ── PROFILE ───────────────────────────────────────────────────────────────────
+function openProfile(){
+  buildProfileContent();
+  document.getElementById('profile-screen').classList.add('open');
+}
+
+function closeProfile(){
+  document.getElementById('profile-screen').classList.remove('open');
+}
+
+function buildProfileContent(){
+  if(!currentUser) return;
+  var role = currentUser.role;
+  var html = '';
+
+  // ── Hero ──
+  var roleLabel = {admin:'Chief Executive Officer',vendeur:'Vendeuse',couturiere:'Couturière'}[role]||role;
+  html += '<div class="profile-hero">'
+    +'<div class="profile-avatar"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>'
+    +'<div><div class="profile-hero-name">'+currentUser.name+'</div><div class="profile-hero-role">'+roleLabel+' · Lido Vevey</div></div>'
+    +'</div>';
+
+  // ── Stats (all roles, slightly different) ──
+  var total = commandes.length;
+  var enCours = commandes.filter(function(c){return c.status!=='termine';}).length;
+  var termines = commandes.filter(function(c){return c.status==='termine';}).length;
+  var thisMonth = commandes.filter(function(c){
+    var d = new Date(c.dateRaw||c.date); var n = new Date();
+    return d.getMonth()===n.getMonth()&&d.getFullYear()===n.getFullYear();
+  }).length;
+
+  if(role==='admin' || role==='vendeur'){
+    html += '<div class="stat-grid">'
+      +'<div class="stat-card"><div class="stat-val">'+thisMonth+'</div><div class="stat-lbl">Vestes ce mois</div></div>'
+      +'<div class="stat-card"><div class="stat-val">'+enCours+'</div><div class="stat-lbl">En cours</div></div>'
+      +'<div class="stat-card"><div class="stat-val">'+total+'</div><div class="stat-lbl">Total depuis le début</div></div>'
+      +'<div class="stat-card"><div class="stat-val">'+termines+'</div><div class="stat-lbl">Terminées</div></div>'
+      +'</div>';
+  } else if(role==='couturiere'){
+    var retouches = commandes.filter(function(c){return c.retouche&&c.status!=='termine';}).length;
+    var retDone   = commandes.filter(function(c){return c.retouche&&c.status==='termine';}).length;
+    html += '<div class="stat-grid">'
+      +'<div class="stat-card"><div class="stat-val">'+retouches+'</div><div class="stat-lbl">Retouches en attente</div></div>'
+      +'<div class="stat-card"><div class="stat-val">'+retDone+'</div><div class="stat-lbl">Retouches terminées</div></div>'
+      +'</div>';
+  }
+
+  // ── Facturation (admin only) ──
+  if(role==='admin'){
+    var months = {};
+    commandes.forEach(function(c){
+      var d = new Date(c.dateRaw||c.date);
+      var key = d.getFullYear()+'-'+(d.getMonth()+1);
+      var lbl = ['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'][d.getMonth()]+' '+d.getFullYear();
+      if(!months[key]) months[key]={lbl:lbl,count:0};
+      months[key].count++;
+    });
+    var monthKeys = Object.keys(months).sort().reverse().slice(0,4);
+    if(monthKeys.length){
+
+    // Static historical billing
+    var staticBilling = [
+      {lbl:'mai 2026',    count:7},
+      {lbl:'avr. 2026',   count:5},
+      {lbl:'mar. 2026',   count:6},
+      {lbl:'fév. 2026',   count:4},
+      {lbl:'jan. 2026',   count:3},
+      {lbl:'sep. 2025',   count:2},
+    ];
+    html += '<div class="sec-lbl">Historique facturation</div><div class="card"><div style="padding:4px 16px 8px">';
+    staticBilling.forEach(function(m){
+      html += '<div class="billing-row"><div class="billing-month">'+m.lbl+'</div>'
+        +'<div style="font-size:12px;color:#8e8e93;margin-right:12px">'+m.count+' veste'+(m.count>1?'s':'')+'</div>'
+        +'<div class="billing-amount">'+(m.count*60)+' CHF</div></div>';
+    });
+    html += '</div></div>';
+    }
+
+    // ── Infos magasin ──
+    html += '<div class="sec-lbl">Accord commercial</div>'
+      +'<div class="card">'
+      +'<div class="field-row no-tap"><div class="field-label">Tarif cirage</div><div class="field-val">60 CHF / veste</div></div>'
+      +'<div class="field-row no-tap"><div class="field-label">Partenaire</div><div class="field-val">Bewax · Remaufens</div></div>'
+      +'<div class="field-row no-tap" style="border-bottom:none"><div class="field-label">Depuis</div><div class="field-val">Septembre 2024</div></div>'
+      +'</div>';
+  }
+
+  // ── Contact Bewax ──
+  html += '<div class="sec-lbl">Contact</div>'
+    +'<a href="tel:+41797561575" style="text-decoration:none"><div class="contact-bewax">'
+    +'<div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16h.19z"/></svg></div>'
+    +'<div><div style="font-size:13px;font-weight:600;color:#1c1c1e">Appeler William</div><div style="font-size:11px;color:#8e8e93;margin-top:1px">+41 79 756 15 75 · Bewax</div></div>'
+    +'<div style="margin-left:auto"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#c7c7cc;stroke-width:2;fill:none"><polyline points="9 18 15 12 9 6"/></svg></div>'
+    +'</div></a>'
+    +'<a href="mailto:contact@bewax.ch" style="text-decoration:none"><div class="contact-bewax" style="margin-bottom:0">'
+    +'<div class="contact-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>'
+    +'<div><div style="font-size:13px;font-weight:600;color:#1c1c1e">Email Bewax</div><div style="font-size:11px;color:#8e8e93;margin-top:1px">contact@bewax.ch</div></div>'
+    +'<div style="margin-left:auto"><svg viewBox="0 0 24 24" style="width:14px;height:14px;stroke:#c7c7cc;stroke-width:2;fill:none"><polyline points="9 18 15 12 9 6"/></svg></div>'
+    +'</div></a>';
+
+  // ── Activity log (admin) ──
+  if(role==='admin'){
+    var recent = commandes.slice().sort(function(a,b){return (b.dateRaw||'')>(a.dateRaw||'')?1:-1;}).slice(0,5);
+    if(recent.length){
+      html += '<div class="sec-lbl">Activité récente</div><div class="card"><div style="padding:4px 16px 8px">';
+      recent.forEach(function(c){
+        html += '<div class="activity-row">'
+          +'<div class="activity-dot"></div>'
+          +'<div class="activity-txt">'+c.prenom+' '+c.nom.toUpperCase()+' · '+c.marque+'</div>'
+          +'<div class="activity-time">'+c.date+'</div>'
+          +'</div>';
+      });
+      html += '</div></div>';
+
+    }
+  }
+
+  // ── Change PIN ──
+  html += '<div class="sec-lbl" style="margin-top:20px">Mon compte</div>'
+    +'<div class="card">'
+    +'<div class="field-row no-tap"><div class="field-label">Prénom</div><div class="field-val">'+currentUser.name+'</div></div>'
+    +'<div class="field-row" onclick="openChangePIN()" style="border-bottom:none;cursor:pointer"><div class="field-label">Code PIN</div><div class="field-val" style="letter-spacing:.25em">••••</div><div class="field-chev"><svg viewBox="0 0 24 24" style="width:12px;height:12px;stroke:#c7c7cc;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round"><polyline points="9 18 15 12 9 6"/></svg></div></div>'
+    +'</div>';
+
+  // ── Logout ──
+  html += '<button class="logout-big" onclick="doLogout();closeProfile();">Se déconnecter</button>';
+
+  document.getElementById('profile-content').innerHTML = html;
+}
+
 // ── INIT ──────────────────────────────────────────────────────────────────────
 // Demo data if empty
+// Show login on start
+// Auto-login as admin (PIN screen disabled for now)
+(function(){
+  var admin = users.find(function(u){return u.role==='admin';}) || users[0];
+  if(admin){
+    currentUser = admin;
+    document.getElementById('partnerBadge').textContent = admin.name;
+    var pb = document.getElementById('profile-btn'); if(pb) pb.style.display='flex';
+    applyRole(admin.role);
+  }
+})();
+
 if(!commandes.length){
   commandes = [
     {ref:'BWX-LIDO-001',date:'12 mai 2026',dateRaw:'2026-05-12T09:00:00Z',prenom:'Laurent',nom:'Bovard',tel:'+41 79 231 44 12',email:'l.bovard@gmail.com',marque:'Barbour',couleur:'Olive',taille:'L',etat:'use',cirage:'premier',retouche:true,retouches:['fermeture','manchettes'],retLabels:{fermeture:'Fermeture éclair',manchettes:'Manchettes'},deliv:'magasin',adresse:'',notes:'Veste achetée il y a 3 ans, jamais cirée',status:'retouche',statusDates:{intake:'2026-05-12T09:00:00Z',nettoyage:'2026-05-12T09:00:00Z',retouche:'2026-05-13T10:00:00Z'},retoucheDone:{fermeture:true,manchettes:false}},
